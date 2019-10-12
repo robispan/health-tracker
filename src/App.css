@@ -42,7 +42,8 @@ img {
 }
 
 .container {
-  margin: 1.5rem 2rem;
+  padding: 1.5rem 2rem;
+  margin: auto;
 }
 
 .hide-mobile {
@@ -77,15 +78,23 @@ img {
 
 /* Small devices (mobile landscape) */
 @media (min-width: 480px) {
+  .container {
+    max-width: 800px;
+    padding: 3rem 5rem;
+  }
+
   a:hover {
     color: rgb(131, 131, 131);
   }
+
   .hide-mobile {
     display: block;
   }
+
   .navbar ul {
     width: 180px;
   }
+
   .navbar img {
     width: 160px;
   }
@@ -97,8 +106,8 @@ img {
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
-}
-
-/* Large devices (desktops) */
-@media (min-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 5rem 8rem;
+  }
 }
