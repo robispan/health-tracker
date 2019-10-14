@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Card from '../assets/Card';
-import StravaImg from '../assets/images/strava.jpg';
-import NutriticsImg from '../assets/images/nutritics.png';
-import RunkeeperImg from '../assets/images/runkeeper.jpg';
-import TomtomImg from '../assets/images/tomtom.png';
-import LifelogImg from '../assets/images/lifelog.png';
+import Card from './Card';
+import StravaImg from '../../assets/images/strava.jpg';
+import NutriticsImg from '../../assets/images/nutritics.png';
+import RunkeeperImg from '../../assets/images/runkeeper.jpg';
+import TomtomImg from '../../assets/images/tomtom.png';
+import LifelogImg from '../../assets/images/lifelog.png';
 
 const Home = () => {
   return (
