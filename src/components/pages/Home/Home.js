@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from './Card';
+import ConnectCard from './ConnectCard';
 import StravaImg from '../../assets/images/strava.jpg';
 import NutriticsImg from '../../assets/images/nutritics.png';
 import RunkeeperImg from '../../assets/images/runkeeper.jpg';
@@ -13,11 +13,11 @@ const Home = () => {
       <h2 className='center upper'>Connect your apps</h2>
 
       <div className='card-container'>
-        <Card imageUrl={StravaImg} />
-        <Card imageUrl={NutriticsImg} />
-        <Card imageUrl={RunkeeperImg} />
-        <Card imageUrl={TomtomImg} />
-        <Card imageUrl={LifelogImg} />
+        <ConnectCard imageUrl={StravaImg} />
+        <ConnectCard imageUrl={NutriticsImg} />
+        <ConnectCard imageUrl={RunkeeperImg} />
+        <ConnectCard imageUrl={TomtomImg} />
+        <ConnectCard imageUrl={LifelogImg} />
       </div>
     </div>
   );
