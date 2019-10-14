@@ -10,7 +10,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
-  color: #333;
+  color: #4e4b46;
   min-width: 320px;
 }
 
@@ -28,18 +28,6 @@ img {
 }
 
 /* Utility classes */
-.active {
-  position: relative;
-}
-.active:after {
-  content: '';
-  height: 0.2em;
-  width: 100%;
-  background-color: #7c7870;
-  position: absolute;
-  bottom: -0.2em;
-  left: 0;
-}
 
 .container {
   padding: 1.5rem 2rem;
@@ -48,6 +36,14 @@ img {
 
 .hide-mobile {
   display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 /* Default styles (mobile portrait) */
@@ -74,6 +70,20 @@ img {
 
 .navbar a {
   font-size: 1.5em;
+}
+
+.navbar .active {
+  position: relative;
+}
+
+.navbar .active:after {
+  content: '';
+  height: 0.15em;
+  width: 100%;
+  background-color: #8a8479;
+  position: absolute;
+  bottom: -0.4em;
+  left: 0;
 }
 
 /* Small devices (mobile landscape) */
