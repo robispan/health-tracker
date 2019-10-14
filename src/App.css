@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
   line-height: 1.6;
   background-color: #fff;
   color: #4e4b46;
@@ -88,6 +88,10 @@ img {
 
 /* Small devices (mobile landscape) */
 @media (min-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
   .container {
     max-width: 800px;
     padding: 3rem 5rem;
@@ -116,6 +120,10 @@ img {
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
   .container {
     max-width: 800px;
     padding: 5rem 8rem;
