@@ -131,6 +131,8 @@ ul {
   text-align: center;
   color: #00b9bb;
   font-weight: 500;
+  font-size: 1.1em;
+  transition: all 150ms ease-out;
 }
 
 .card-link.connected {
