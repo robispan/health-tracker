@@ -90,13 +90,13 @@ ul {
   left: 0;
 }
 
-.card-container {
+.connect-card-grid {
   display: flex;
   flex-wrap: wrap;
   margin-right: -2em;
 }
 
-.card {
+.connect-card {
   flex-basis: calc(50% - 2em);
   margin: 0 2em 1.5em 0;
   float: left;
@@ -109,7 +109,7 @@ ul {
   overflow: hidden;
 }
 
-.card-image {
+.connect-card-image {
   height: 0;
   width: 100%;
   padding-top: 60%;
@@ -118,12 +118,12 @@ ul {
   background-size: cover;
 }
 
-.card-image img {
+.connect-card-image img {
   width: 100%;
 }
 
-.card-link,
-.card-link:hover {
+.connect-card-link,
+.connect-card-link:hover {
   display: inline-block;
   margin: 1em;
   padding: 0.35em 1em;
@@ -135,7 +135,7 @@ ul {
   transition: all 150ms ease-out;
 }
 
-.card-link.connected {
+.connect-card-link.connected {
   background-color: #2dc9d7;
   color: white;
   font-weight: 600;
@@ -177,11 +177,11 @@ ul {
     font-size: 1.2em;
   }
 
-  .card-container {
+  .connect-card-container {
     margin-right: -2em;
   }
 
-  .card {
+  .connect-card {
     flex-basis: calc(33.3% - 2em);
   }
 }
@@ -204,16 +204,16 @@ ul {
     width: 240px;
   }
 
-  .card-container {
+  .connect-card-grid {
     margin-right: -3em;
   }
 
-  .card {
+  .connect-card {
     flex-basis: calc(33.3% - 3em);
     margin: 0 3em 2.5em 0;
   }
 
-  .card-link:hover {
+  .connect-card-link:hover {
     background-color: #2dc9d7;
     color: white;
     font-weight: 600;

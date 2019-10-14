@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <h2 className='center upper'>Connect your apps</h2>
 
-      <div className='card-container'>
+      <div className='connect-card-grid'>
         <ConnectCard imageUrl={StravaImg} />
         <ConnectCard imageUrl={NutriticsImg} />
         <ConnectCard imageUrl={RunkeeperImg} />

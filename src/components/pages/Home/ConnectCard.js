@@ -6,9 +6,9 @@ const Card = ({ imageUrl }) => {
   };
 
   return (
-    <div className='card'>
-      <div className='card-image' style={imageStyle}></div>
-      <a href='#' className='card-link'>
+    <div className='connect-card'>
+      <div className='connect-card-image' style={imageStyle}></div>
+      <a href='#' className='connect-card-link'>
         Connect
       </a>
     </div>
