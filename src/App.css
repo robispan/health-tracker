@@ -110,6 +110,7 @@ ul {
 
 .metrics-card {
   padding: 1em;
+  min-height: 220px;
 }
 
 .metrics-card-title {
