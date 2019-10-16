@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
 import StravaContext from '../../../context/strava/stravaContext';
 
@@ -9,10 +10,46 @@ import RunkeeperImg from '../../assets/images/runkeeper.jpg';
 import TomtomImg from '../../assets/images/tomtom.png';
 import LifelogImg from '../../assets/images/lifelog.png';
 
-const Home = () => {
-  const { stravaData, authStrava } = useContext(StravaContext);
+const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
+const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
 
-  return (
+const Home = () => {
+  const {
+    stravaData,
+    loading,
+    authStrava,
+    getStravaData,
+    setLoading
+  } = useContext(StravaContext);
+
+  useEffect(() => {
+    // Check session storage for refresh tokens
+    const stravaRefreshToken = sessionStorage.getItem('_strava_rt');
+
+    if (stravaRefreshToken && !stravaData) {
+      fetchData();
+      sessionStorage.removeItem('_strava_rt');
+    }
+
+    async function fetchData() {
+      // Set loading
+      setLoading(true);
+
+      // Get auth tokens
+      const res = await axios.post(
+        `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&refresh_token=${stravaRefreshToken}&grant_type=refresh_token`
+      );
+
+      sessionStorage.setItem('_strava_rt', res.data.refresh_token);
+
+      // Call action to get athlete data
+      getStravaData(res.data.access_token);
+    }
+  }, []);
+
+  return loading ? (
+    'Loading ...'
+  ) : (
     <div>
       <h2 className='center upper'>Connect your apps</h2>
 
