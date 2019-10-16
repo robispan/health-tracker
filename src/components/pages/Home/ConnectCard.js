@@ -1,15 +1,21 @@
 import React from 'react';
 
-const Card = ({ imageUrl }) => {
-  const imageStyle = {
-    backgroundImage: `url(${imageUrl})`
-  };
+const Card = ({ imageUrl, connected, onConnect }) => {
+  const classList = ['connect-card-link'];
+  if (connected) classList.push('connected');
 
   return (
     <div className='connect-card'>
-      <div className='connect-card-image' style={imageStyle}></div>
-      <a href='#' className='connect-card-link'>
-        Connect
+      <div
+        className='connect-card-image'
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div>
+      <a
+        href='#'
+        onClick={connected ? null : onConnect}
+        className={classList.join(' ')}
+      >
+        {connected ? 'Connected' : 'Connect'}
       </a>
     </div>
   );
