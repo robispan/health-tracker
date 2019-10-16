@@ -22,10 +22,10 @@ const Dashboard = () => {
       <h2 className='center upper'>Dashboard</h2>
       <div className='grid'>
         {/* Weight */}
-        <MetricsCard label='Weight loss' ratio={weightRatio} />
+        <MetricsCard label='Weight loss progression' ratio={weightRatio} />
 
         {/* Heart rate */}
-        <MetricsCard label='Heart rate' />
+        <MetricsCard label='Heart rate progression' />
       </div>
     </div>
   );
