@@ -1,3 +1,19 @@
+#HealthTracker App
+
+The HealthTracker app is built with Create React App and React Router. React Context is used for global state management.
+
+App consists of two main pages - Home page which contains ConnectCard components used for connecting with APIs, and Dashboard page that contains MetricsCard components which show collected data.
+
+##HOMEPAGE
+Each ConnectCard component has a connect button that redirects user to the Tracker app authorization page. Upon authorization user is redirected to a dedicated route that collect authorization code used for fetching oauth2 tokens. Context action is then used for fetching user data and setting it to context state.
+
+Refresh tokens are stored in sessionStorage (in production version tokens would ideally be stored on the backend) and accessed when Home page component is created (i.e. when user refreshes page or after they are redirected from one of the tracker apps authorization pages) to fetch oauth2 tokens. Context action for fetching user data is then called with access token payload.
+
+##DASHBOARD
+User metrics data is collected from react context and delegated to each of the MetricsCard components, which use react-circular-progressbar for rendering results.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
