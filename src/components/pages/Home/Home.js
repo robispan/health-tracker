@@ -4,6 +4,7 @@ import axios from 'axios';
 import StravaContext from '../../../context/strava/stravaContext';
 
 import ConnectCard from './ConnectCard';
+
 import StravaImg from '../../assets/images/strava.jpg';
 import NutriticsImg from '../../assets/images/nutritics.png';
 import RunkeeperImg from '../../assets/images/runkeeper.jpg';
