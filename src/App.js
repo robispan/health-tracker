@@ -17,14 +17,13 @@ function App() {
         <Navbar />
         <div className='container'>
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/dashboard'>
-              <Dashboard />
-            </Route>
+            {/* Home */}
+            <Route exact path='/' component={Home} />
 
-            {/* Tracker apps redirects */}
+            {/* Dashboard */}
+            <Route exact path='/dashboard' component={Dashboard} />
+
+            {/* Health tracker apps redirect pages */}
             <Route exact path='/strava-auth' component={StravaRedirect} />
           </Switch>
         </div>
