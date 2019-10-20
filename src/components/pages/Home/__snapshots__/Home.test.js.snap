@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders wit context data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="center upper"
+    >
+      Connect your apps
+    </h2>
+    <div
+      class="grid"
+    >
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(strava.jpg);"
+        />
+        <a
+          class="connect-card-button connected"
+          href="#"
+        >
+          Disconnect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(nutritics.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(runkeeper.jpg);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(tomtom.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(lifelog.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders without context data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="center upper"
+    >
+      Connect your apps
+    </h2>
+    <div
+      class="grid"
+    >
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(strava.jpg);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(nutritics.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(runkeeper.jpg);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(tomtom.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+      <div
+        class="connect-card"
+      >
+        <div
+          class="connect-card-image"
+          style="background-image: url(lifelog.png);"
+        />
+        <a
+          class="connect-card-button"
+          href="#"
+        >
+          Connect
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
