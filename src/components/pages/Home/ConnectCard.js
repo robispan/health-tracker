@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Card = ({ imageUrl, connected, onConnect }) => {
+const ConnectCard = ({ imageUrl, connected, onConnect }) => {
   const classList = ['connect-card-link'];
   if (connected) classList.push('connected');
 
@@ -21,4 +22,10 @@ const Card = ({ imageUrl, connected, onConnect }) => {
   );
 };
 
-export default Card;
+ConnectCard.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  connected: PropTypes.bool.isRequired,
+  onConnect: PropTypes.func.isRequired
+};
+
+export default ConnectCard;
