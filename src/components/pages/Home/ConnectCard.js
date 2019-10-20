@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ConnectCard = ({ imageUrl, connected, onConnect }) => {
-  const classList = ['connect-card-link'];
-  if (connected) classList.push('connected');
+  const buttonClasses = ['connect-card-button'];
+  if (connected) buttonClasses.push('connected');
 
   return (
     <div className='connect-card'>
@@ -14,7 +14,7 @@ const ConnectCard = ({ imageUrl, connected, onConnect }) => {
       <a
         href='#'
         onClick={connected ? null : onConnect}
-        className={classList.join(' ')}
+        className={buttonClasses.join(' ')}
       >
         {connected ? 'Connected' : 'Connect'}
       </a>
