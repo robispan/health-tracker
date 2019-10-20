@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="connect-card"
+  >
+    <div
+      class="connect-card-image"
+      style="background-image: url(strava.jpg);"
+    />
+    <a
+      class="connect-card-button"
+      href="#"
+    >
+      Connect
+    </a>
+  </div>
+</DocumentFragment>
+`;
