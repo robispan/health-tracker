@@ -24,8 +24,8 @@ const ConnectCard = ({ imageUrl, connected, onConnect }) => {
 
 ConnectCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
-  connected: PropTypes.bool.isRequired,
-  onConnect: PropTypes.func.isRequired
+  connected: PropTypes.bool,
+  onConnect: PropTypes.func
 };
 
 export default ConnectCard;
