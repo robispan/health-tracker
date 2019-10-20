@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ConnectCard = ({ imageUrl, connected, onConnect }) => {
+const ConnectCard = ({ imageUrl, connected, onConnect, onDisconnect }) => {
+  // Dynamic style for button
   const buttonClasses = ['connect-card-button'];
   if (connected) buttonClasses.push('connected');
 
@@ -13,10 +14,10 @@ const ConnectCard = ({ imageUrl, connected, onConnect }) => {
       ></div>
       <a
         href='#'
-        onClick={connected ? null : onConnect}
+        onClick={connected ? onDisconnect : onConnect}
         className={buttonClasses.join(' ')}
       >
-        {connected ? 'Connected' : 'Connect'}
+        {connected ? 'Disconnect' : 'Connect'}
       </a>
     </div>
   );
@@ -25,7 +26,8 @@ const ConnectCard = ({ imageUrl, connected, onConnect }) => {
 ConnectCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   connected: PropTypes.bool,
-  onConnect: PropTypes.func
+  onConnect: PropTypes.func,
+  onDisconnect: PropTypes.func
 };
 
 export default ConnectCard;

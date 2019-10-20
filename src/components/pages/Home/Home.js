@@ -20,6 +20,7 @@ const Home = () => {
     loading,
     authStrava,
     getStravaData,
+    clearStravaData,
     setLoading
   } = useContext(StravaContext);
 
@@ -60,6 +61,7 @@ const Home = () => {
           imageUrl={StravaImg}
           connected={stravaData !== null}
           onConnect={authStrava}
+          onDisconnect={clearStravaData}
         />
 
         <ConnectCard imageUrl={NutriticsImg} />
