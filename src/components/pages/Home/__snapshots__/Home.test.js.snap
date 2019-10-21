@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders wit context data 1`] = `
+exports[`renders correctly with context data 1`] = `
 <DocumentFragment>
   <div>
     <h2
@@ -86,7 +86,7 @@ exports[`renders wit context data 1`] = `
 </DocumentFragment>
 `;
 
-exports[`renders without context data 1`] = `
+exports[`renders correctly without context data 1`] = `
 <DocumentFragment>
   <div>
     <h2

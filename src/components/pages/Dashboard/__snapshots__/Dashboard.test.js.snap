@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with context data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="center upper"
+    >
+      Dashboard
+    </h2>
+    <div
+      class="grid"
+    >
+      <div
+        class="metrics-card"
+      >
+        <h3
+          class="metrics-card-title center"
+        >
+          Weight loss progression
+        </h3>
+        <div
+          class="center"
+        >
+          Connect trackers on homepage to see your progression!
+        </div>
+      </div>
+      <div
+        class="metrics-card"
+      >
+        <h3
+          class="metrics-card-title center"
+        >
+          Heart rate progression
+        </h3>
+        <div
+          class="center"
+        >
+          Connect trackers on homepage to see your progression!
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly without context data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="center upper"
+    >
+      Dashboard
+    </h2>
+    <div
+      class="grid"
+    >
+      <div
+        class="metrics-card"
+      >
+        <h3
+          class="metrics-card-title center"
+        >
+          Weight loss progression
+        </h3>
+        <div
+          class="center"
+        >
+          Connect trackers on homepage to see your progression!
+        </div>
+      </div>
+      <div
+        class="metrics-card"
+      >
+        <h3
+          class="metrics-card-title center"
+        >
+          Heart rate progression
+        </h3>
+        <div
+          class="center"
+        >
+          Connect trackers on homepage to see your progression!
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
