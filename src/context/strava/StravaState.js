@@ -30,16 +30,21 @@ const StravaState = props => {
   const getStravaData = async access_token => {
     setLoading();
 
-    const dataRes = await axios.get(`https://www.strava.com/api/v3/athlete`, {
-      headers: {
-        Authorization: `Bearer ${access_token}`
-      }
-    });
+    try {
+      const dataRes = await axios.get(`https://www.strava.com/api/v3/athlete`, {
+        headers: {
+          Authorization: `Bearer ${access_token}`
+        }
+      });
 
-    dispatch({
-      type: GET_STRAVA_DATA,
-      payload: dataRes.data
-    });
+      dispatch({
+        type: GET_STRAVA_DATA,
+        payload: dataRes.data
+      });
+    } catch (error) {
+      console.log('error fetching Strava athlete data', error);
+      stopLoading();
+    }
   };
 
   // Clear strava data
