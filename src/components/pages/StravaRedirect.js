@@ -7,7 +7,7 @@ const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
 
 const StravaRedirect = ({ location, history }) => {
-  const { getStravaData, setLoading } = useContext(StravaContext);
+  const { getStravaData, setLoading, stopLoading } = useContext(StravaContext);
 
   useEffect(() => {
     // Get authorization code
@@ -20,15 +20,22 @@ const StravaRedirect = ({ location, history }) => {
       setLoading();
 
       // Get auth tokens
-      const res = await axios.post(
-        `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&code=${authCode}&grant_type=authorization_code`
-      );
+      try {
+        const res = await axios.post(
+          `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&code=${authCode}&grant_type=authorization_code`
+        );
 
-      // Call context action to collect athlete data
-      getStravaData(res.data.access_token);
+        // Call context action to collect athlete data
+        getStravaData(res.data.access_token);
 
-      // Save refresh token to sessionStorage
-      sessionStorage.setItem('_strava_rt', res.data.refresh_token);
+        // Save refresh token to sessionStorage
+        sessionStorage.setItem('_strava_rt', res.data.refresh_token);
+      } catch (error) {
+        console.log('error fetching Strava outh tokens', error);
+      }
+
+      // Stop loading
+      stopLoading();
 
       // Redirect to homepage
       history.push('/');
