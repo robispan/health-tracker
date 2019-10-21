@@ -8,7 +8,7 @@ import Home from './Home';
 
 afterEach(cleanup);
 
-test('renders without context data', () => {
+test('renders correctly without context data', () => {
   const { asFragment } = render(
     <StravaContext.Provider value={{ stravaData: null }}>
       <Home />
@@ -17,7 +17,7 @@ test('renders without context data', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-test('renders wit context data', () => {
+test('renders correctly with context data', () => {
   const { asFragment } = render(
     <StravaContext.Provider value={{}}>
       <Home />
