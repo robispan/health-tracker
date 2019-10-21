@@ -2,12 +2,14 @@ import { useContext, useEffect } from 'react';
 import axios from 'axios';
 
 import StravaContext from '../../context/strava/stravaContext';
+import LoadingContext from '../../context/loading/loadingContext';
 
 const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
 
 const StravaRedirect = ({ location, history }) => {
-  const { getStravaData, setLoading, stopLoading } = useContext(StravaContext);
+  const { getStravaData } = useContext(StravaContext);
+  const { setLoading, stopLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     // Get authorization code

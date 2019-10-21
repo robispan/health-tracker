@@ -2,20 +2,14 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import StravaReducer from './stravaReducer';
 import StravaContext from './stravaContext';
-import {
-  GET_STRAVA_DATA,
-  CLEAR_STRAVA_DATA,
-  SET_LOADING,
-  STOP_LOADING
-} from '../types';
+import { GET_STRAVA_DATA, CLEAR_STRAVA_DATA } from '../types';
 
 const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const StravaState = props => {
   const initialState = {
-    stravaData: null,
-    loading: false
+    stravaData: null
   };
 
   const [state, dispatch] = useReducer(StravaReducer, initialState);
@@ -28,8 +22,6 @@ const StravaState = props => {
 
   // Get athlete data
   const getStravaData = async access_token => {
-    setLoading();
-
     try {
       const dataRes = await axios.get(`https://www.strava.com/api/v3/athlete`, {
         headers: {
@@ -43,7 +35,6 @@ const StravaState = props => {
       });
     } catch (error) {
       console.log('error fetching Strava athlete data', error);
-      stopLoading();
     }
   };
 
@@ -56,22 +47,13 @@ const StravaState = props => {
     });
   };
 
-  // Set loading
-  const setLoading = () => dispatch({ type: SET_LOADING });
-
-  // Stop loading
-  const stopLoading = () => dispatch({ type: STOP_LOADING });
-
   return (
     <StravaContext.Provider
       value={{
         stravaData: state.stravaData,
-        loading: state.loading,
         authStrava,
         getStravaData,
-        clearStravaData,
-        setLoading,
-        stopLoading
+        clearStravaData
       }}
     >
       {props.children}

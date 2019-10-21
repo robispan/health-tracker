@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 
 import StravaContext from '../../../context/strava/stravaContext';
+import LoadingContext from '../../../context/loading/loadingContext';
 
 import ConnectCard from './ConnectCard';
 
@@ -13,28 +14,25 @@ import LifelogImg from '../../assets/images/lifelog.png';
 
 const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
+const getHealthAccessToken = process.env.REACT_APP_GETHEALTH_ACCESS_TOKEN;
 
 const Home = () => {
-  const {
-    stravaData,
-    loading,
-    authStrava,
-    getStravaData,
-    clearStravaData,
-    setLoading,
-    stopLoading
-  } = useContext(StravaContext);
+  const { stravaData, authStrava, getStravaData, clearStravaData } = useContext(
+    StravaContext
+  );
+
+  const { loading, setLoading, stopLoading } = useContext(LoadingContext);
 
   useEffect(() => {
-    // Check session storage for refresh tokens
+    // Check session storage for Strava refresh tokens
     const stravaRefreshToken = sessionStorage.getItem('_strava_rt');
 
     if (stravaRefreshToken && !stravaData) {
-      fetchData();
+      refreshStravaAuth();
       sessionStorage.removeItem('_strava_rt');
     }
 
-    async function fetchData() {
+    async function refreshStravaAuth() {
       setLoading();
 
       // Get auth tokens
@@ -45,7 +43,7 @@ const Home = () => {
 
         sessionStorage.setItem('_strava_rt', res.data.refresh_token);
 
-        // Call action to get athlete data
+        // Call context action to get athlete data
         getStravaData(res.data.access_token);
       } catch (error) {
         console.log('error fetching Strava auth tokens');
@@ -70,10 +68,13 @@ const Home = () => {
           onDisconnect={clearStravaData}
         />
 
-        <ConnectCard imageUrl={NutriticsImg} />
-        <ConnectCard imageUrl={RunkeeperImg} />
-        <ConnectCard imageUrl={TomtomImg} />
-        <ConnectCard imageUrl={LifelogImg} />
+        {/* Runkeeper card */}
+        <ConnectCard
+          imageUrl={RunkeeperImg}
+          // connected={runkeeperConnected}
+          // onConnect={authRunkeeper}
+          // onDisconnect={disconnectRunkeeper}
+        />
       </div>
     </div>
   );

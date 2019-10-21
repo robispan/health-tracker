@@ -1,17 +1,15 @@
-import { CLEAR_STRAVA_DATA, GET_STRAVA_DATA } from '../types';
+import { SET_LOADING, STOP_LOADING } from '../types';
 
 export default (state, action) => {
   switch (action.type) {
-    case GET_STRAVA_DATA:
+    case SET_LOADING:
       return {
         ...state,
-        stravaData: action.payload,
-        loading: false
+        loading: true
       };
-    case CLEAR_STRAVA_DATA:
+    case STOP_LOADING:
       return {
         ...state,
-        stravaData: null,
         loading: false
       };
     default:

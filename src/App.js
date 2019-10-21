@@ -8,30 +8,33 @@ import StravaRedirect from './components/pages/StravaRedirect';
 import Page404 from './components/pages/Page404';
 
 import StravaState from './context/strava/StravaState';
+import LoadingState from './context/loading/LoadingState';
 import './App.css';
 
 function App() {
   return (
-    <StravaState>
-      <Router>
-        <Navbar />
-        <div className='container'>
-          <Switch>
-            {/* Home */}
-            <Route exact path='/' component={Home} />
+    <LoadingState>
+      <StravaState>
+        <Router>
+          <Navbar />
+          <div className='container'>
+            <Switch>
+              {/* Home */}
+              <Route exact path='/' component={Home} />
 
-            {/* Dashboard */}
-            <Route exact path='/dashboard' component={Dashboard} />
+              {/* Dashboard */}
+              <Route exact path='/dashboard' component={Dashboard} />
 
-            {/* Health tracker apps redirect pages */}
-            <Route exact path='/strava-auth' component={StravaRedirect} />
+              {/* Health tracker apps redirect pages */}
+              <Route exact path='/strava-auth' component={StravaRedirect} />
 
-            {/* 404 */}
-            <Route component={Page404} />
-          </Switch>
-        </div>
-      </Router>
-    </StravaState>
+              {/* 404 */}
+              <Route component={Page404} />
+            </Switch>
+          </div>
+        </Router>
+      </StravaState>
+    </LoadingState>
   );
 }
 
