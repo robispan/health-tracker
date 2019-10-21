@@ -1,4 +1,9 @@
-import { CLEAR_STRAVA_DATA, GET_STRAVA_DATA, SET_LOADING } from '../types';
+import {
+  CLEAR_STRAVA_DATA,
+  GET_STRAVA_DATA,
+  SET_LOADING,
+  STOP_LOADING
+} from '../types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -18,6 +23,11 @@ export default (state, action) => {
       return {
         ...state,
         loading: true
+      };
+    case STOP_LOADING:
+      return {
+        ...state,
+        loading: false
       };
     default:
       return state;

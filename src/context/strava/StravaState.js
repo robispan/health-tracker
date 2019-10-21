@@ -2,7 +2,12 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import StravaReducer from './stravaReducer';
 import StravaContext from './stravaContext';
-import { GET_STRAVA_DATA, CLEAR_STRAVA_DATA, SET_LOADING } from '../types';
+import {
+  GET_STRAVA_DATA,
+  CLEAR_STRAVA_DATA,
+  SET_LOADING,
+  STOP_LOADING
+} from '../types';
 
 const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -49,6 +54,9 @@ const StravaState = props => {
   // Set loading
   const setLoading = () => dispatch({ type: SET_LOADING });
 
+  // Stop loading
+  const stopLoading = () => dispatch({ type: STOP_LOADING });
+
   return (
     <StravaContext.Provider
       value={{
@@ -57,7 +65,8 @@ const StravaState = props => {
         authStrava,
         getStravaData,
         clearStravaData,
-        setLoading
+        setLoading,
+        stopLoading
       }}
     >
       {props.children}

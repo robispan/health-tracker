@@ -1,3 +1,4 @@
 export const GET_STRAVA_DATA = 'GET_STRAVA_DATA';
 export const CLEAR_STRAVA_DATA = 'CLEAR_STRAVA_DATA';
 export const SET_LOADING = 'SET_LOADING';
+export const STOP_LOADING = 'STOP_LOADING';
