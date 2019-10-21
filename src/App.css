@@ -61,6 +61,10 @@ ul {
   margin: 0 auto;
 }
 
+.navbar img {
+  cursor: pointer;
+}
+
 .navbar ul {
   display: flex;
   justify-content: space-around;
@@ -76,11 +80,11 @@ ul {
   font-size: 1.5em;
 }
 
-.navbar .active {
+.navbar li .active {
   position: relative;
 }
 
-.navbar .active:after {
+.navbar li .active:after {
   content: '';
   height: 0.15em;
   width: 100%;

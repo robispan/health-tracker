@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-inner'>
-        <img src={Logo} className='hide-mobile' />
+        <NavLink to='/' className='navbar-logo'>
+          <img src={Logo} className='hide-mobile' alt='logo' />
+        </NavLink>
         <ul>
           <li>
             <NavLink exact={true} activeClassName='active' to='/'>
