@@ -1,5 +1,6 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useContext } from 'react';
 import axios from 'axios';
+import LoadingContext from '../loading/loadingContext';
 import StravaReducer from './stravaReducer';
 import StravaContext from './stravaContext';
 import { GET_STRAVA_DATA, CLEAR_STRAVA_DATA } from '../types';
@@ -8,6 +9,8 @@ const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const StravaState = props => {
+  const { setLoading, stopLoading } = useContext(LoadingContext);
+
   const initialState = {
     stravaData: null
   };
@@ -22,6 +25,8 @@ const StravaState = props => {
 
   // Get athlete data
   const getStravaData = async access_token => {
+    setLoading();
+
     try {
       const dataRes = await axios.get(`https://www.strava.com/api/v3/athlete`, {
         headers: {
@@ -36,6 +41,8 @@ const StravaState = props => {
     } catch (error) {
       console.log('error fetching Strava athlete data', error);
     }
+
+    stopLoading();
   };
 
   // Clear strava data

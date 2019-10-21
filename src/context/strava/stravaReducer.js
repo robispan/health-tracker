@@ -5,14 +5,12 @@ export default (state, action) => {
     case GET_STRAVA_DATA:
       return {
         ...state,
-        stravaData: action.payload,
-        loading: false
+        stravaData: action.payload
       };
     case CLEAR_STRAVA_DATA:
       return {
         ...state,
-        stravaData: null,
-        loading: false
+        stravaData: null
       };
     default:
       return state;
