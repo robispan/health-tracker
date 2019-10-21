@@ -30,55 +30,13 @@ exports[`renders correctly with context data 1`] = `
       >
         <div
           class="connect-card-image"
-          style="background-image: url(nutritics.png);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
           style="background-image: url(runkeeper.jpg);"
         />
         <a
-          class="connect-card-button"
+          class="connect-card-button connected"
           href="#"
         >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
-          style="background-image: url(tomtom.png);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
-          style="background-image: url(lifelog.png);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
+          Disconnect
         </a>
       </div>
     </div>
@@ -116,49 +74,7 @@ exports[`renders correctly without context data 1`] = `
       >
         <div
           class="connect-card-image"
-          style="background-image: url(nutritics.png);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
           style="background-image: url(runkeeper.jpg);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
-          style="background-image: url(tomtom.png);"
-        />
-        <a
-          class="connect-card-button"
-          href="#"
-        >
-          Connect
-        </a>
-      </div>
-      <div
-        class="connect-card"
-      >
-        <div
-          class="connect-card-image"
-          style="background-image: url(lifelog.png);"
         />
         <a
           class="connect-card-button"

@@ -31,7 +31,7 @@ exports[`renders correctly with context data 1`] = `
         <h3
           class="metrics-card-title center"
         >
-          Heart rate progression
+          Calories burn progression
         </h3>
         <div
           class="center"
@@ -75,7 +75,7 @@ exports[`renders correctly without context data 1`] = `
         <h3
           class="metrics-card-title center"
         >
-          Heart rate progression
+          Calories burn progression
         </h3>
         <div
           class="center"
