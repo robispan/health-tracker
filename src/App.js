@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/pages/Home/Home';
 import Dashboard from './components/pages/Dashboard/Dashboard';
 import StravaRedirect from './components/pages/StravaRedirect';
+import Page404 from './components/pages/Page404';
 
 import StravaState from './context/strava/StravaState';
 
@@ -25,6 +26,9 @@ function App() {
 
             {/* Health tracker apps redirect pages */}
             <Route exact path='/strava-auth' component={StravaRedirect} />
+
+            {/* 404 */}
+            <Route component={Page404} />
           </Switch>
         </div>
       </Router>
