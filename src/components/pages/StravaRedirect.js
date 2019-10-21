@@ -7,7 +7,7 @@ const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
 
 const StravaRedirect = ({ location, history }) => {
-  const { getStravaData } = useContext(StravaContext);
+  const { getStravaData, setLoading } = useContext(StravaContext);
 
   useEffect(() => {
     // Get authorization code
@@ -16,6 +16,9 @@ const StravaRedirect = ({ location, history }) => {
 
     fetchData();
     async function fetchData() {
+      // Set loading
+      setLoading();
+
       // Get auth tokens
       const res = await axios.post(
         `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&code=${authCode}&grant_type=authorization_code`
