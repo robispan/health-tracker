@@ -1,27 +1,26 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 
-import StravaContext from '../../../context/strava/stravaContext';
 import LoadingContext from '../../../context/loading/loadingContext';
+import StravaContext from '../../../context/strava/stravaContext';
+import RunkeeperContext from '../../../context/runKeeper/runKeeperContext';
 
 import ConnectCard from './ConnectCard';
 
 import StravaImg from '../../assets/images/strava.jpg';
-import NutriticsImg from '../../assets/images/nutritics.png';
 import RunkeeperImg from '../../assets/images/runkeeper.jpg';
-import TomtomImg from '../../assets/images/tomtom.png';
-import LifelogImg from '../../assets/images/lifelog.png';
 
 const stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID;
 const stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET;
-const getHealthAccessToken = process.env.REACT_APP_GETHEALTH_ACCESS_TOKEN;
 
 const Home = () => {
+  const { loading, setLoading, stopLoading } = useContext(LoadingContext);
   const { stravaData, authStrava, getStravaData, clearStravaData } = useContext(
     StravaContext
   );
-
-  const { loading, setLoading, stopLoading } = useContext(LoadingContext);
+  const { runKeeperData, authRunKeeper, clearRunKeeperData } = useContext(
+    RunkeeperContext
+  );
 
   useEffect(() => {
     // Check session storage for Strava refresh tokens
@@ -71,9 +70,9 @@ const Home = () => {
         {/* Runkeeper card */}
         <ConnectCard
           imageUrl={RunkeeperImg}
-          // connected={runkeeperConnected}
-          // onConnect={authRunkeeper}
-          // onDisconnect={disconnectRunkeeper}
+          connected={runKeeperData !== null}
+          onConnect={authRunKeeper}
+          onDisconnect={clearRunKeeperData}
         />
       </div>
     </div>
