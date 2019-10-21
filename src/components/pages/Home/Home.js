@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 
 import StravaContext from '../../../context/strava/stravaContext';
@@ -21,7 +21,8 @@ const Home = () => {
     authStrava,
     getStravaData,
     clearStravaData,
-    setLoading
+    setLoading,
+    stopLoading
   } = useContext(StravaContext);
 
   useEffect(() => {
@@ -34,18 +35,23 @@ const Home = () => {
     }
 
     async function fetchData() {
-      // Set loading
-      setLoading(true);
+      setLoading();
 
       // Get auth tokens
-      const res = await axios.post(
-        `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&refresh_token=${stravaRefreshToken}&grant_type=refresh_token`
-      );
+      try {
+        const res = await axios.post(
+          `https://www.strava.com/oauth/token?client_id=${stravaClientId}&client_secret=${stravaClientSecret}&refresh_token=${stravaRefreshToken}&grant_type=refresh_token`
+        );
 
-      sessionStorage.setItem('_strava_rt', res.data.refresh_token);
+        sessionStorage.setItem('_strava_rt', res.data.refresh_token);
 
-      // Call action to get athlete data
-      getStravaData(res.data.access_token);
+        // Call action to get athlete data
+        getStravaData(res.data.access_token);
+      } catch (error) {
+        console.log('error fetching Strava auth tokens');
+      }
+
+      stopLoading();
     }
   }, []);
 
