@@ -7,17 +7,17 @@ const Header = () => {
 	return (
 		<nav className='navbar'>
 			<div className='navbar-inner'>
-				<NavLink to='/' className='navbar-logo'>
+				<NavLink to={`${process.env.PUBLIC_URL}/`} className='navbar-logo'>
 					<img src={Logo} className='hide-mobile' alt='logo' />
 				</NavLink>
 				<ul>
 					<li>
-						<NavLink exact={true} activeClassName='active' to='/'>
+						<NavLink exact={true} activeClassName='active' to={`${process.env.PUBLIC_URL}/`}>
 							Home
             </NavLink>
 					</li>
 					<li>
-						<NavLink to='/dashboard' activeClassName='active'>
+						<NavLink to={`${process.env.PUBLIC_URL}/dashboard`} activeClassName='active'>
 							Dashboard
             </NavLink>
 					</li>

@@ -55,23 +55,23 @@ const App = () => {
 	}, []);
 
 	return (
-		<Router>
+		<Router basename={'/health-tracker'}>
 			<Navbar />
 			<div className='container'>
 				<Switch>
 					{/* Home */}
-					<Route exact path='/' component={Home} />
+					<Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
 
 					{/* Dashboard */}
-					<Route exact path='/dashboard' component={Dashboard} />
+					<Route exact path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard} />
 
 					{/* Strava apps redirect page */}
-					<Route exact path='/strava-auth' component={StravaRedirect} />
+					<Route exact path={`${process.env.PUBLIC_URL}/strava-auth`} component={StravaRedirect} />
 
 					{/* Runkeeper apps redirect page */}
 					<Route
 						exact
-						path='/runkeeper-auth'
+						path={`${process.env.PUBLIC_URL}/runkeeper-auth`}
 						component={RunKeeperRedirect}
 					/>
 
