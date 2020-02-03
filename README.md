@@ -1,10 +1,10 @@
-#HealthTracker App
+# HealthTracker App
 
 The HealthTracker app is built with Create React App and React Router. React Context is used for global state management.
 
 App consists of two main pages - Home page which contains ConnectCard components used for connecting with APIs, and Dashboard page that contains MetricsCard components which show collected data.
 
-##HOMEPAGE
+## HOMEPAGE
 
 1. Strava card:
    Connect button redirects user to the Tracker app authorization page.
@@ -14,7 +14,7 @@ App consists of two main pages - Home page which contains ConnectCard components
 2. Runkeeper card:
    Access token is used for getting access to API calls through get request. After authorization user is redirected to dedicated runkeeper route and context action for fetching user data is called. User data is then set to runkeeper context state.
 
-##DASHBOARD
+## DASHBOARD
 User metrics data is collected from context state and delegated to each of the MetricsCard components, which use react-circular-progressbar for rendering results.
 
 ---
