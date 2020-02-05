@@ -20,7 +20,7 @@ const StravaState = props => {
   // Authorize app to make API calls for strava user
   // User is redirected to /strava-auth after authorization
   const authStrava = () => {
-    window.location.href = `https://www.strava.com/oauth/authorize?client_id=${stravaClientId}&redirect_uri=${baseUrl}/strava-auth/&response_type=code&scope=profile:read_all`;
+    window.location.href = `https://www.strava.com/oauth/authorize?client_id=${stravaClientId}&redirect_uri=${baseUrl}%2F%23%2Fstrava-auth/&response_type=code&scope=profile:read_all`;
   };
 
   // Get athlete data
