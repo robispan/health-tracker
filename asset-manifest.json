@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/health-tracker/static/css/main.d881ca4d.chunk.css",
-    "main.js": "/health-tracker/static/js/main.0a6dd63a.chunk.js",
-    "main.js.map": "/health-tracker/static/js/main.0a6dd63a.chunk.js.map",
-    "runtime-main.js": "/health-tracker/static/js/runtime-main.7054d133.js",
-    "runtime-main.js.map": "/health-tracker/static/js/runtime-main.7054d133.js.map",
-    "static/css/2.22921dbe.chunk.css": "/health-tracker/static/css/2.22921dbe.chunk.css",
-    "static/js/2.5e821cef.chunk.js": "/health-tracker/static/js/2.5e821cef.chunk.js",
-    "static/js/2.5e821cef.chunk.js.map": "/health-tracker/static/js/2.5e821cef.chunk.js.map",
-    "index.html": "/health-tracker/index.html",
-    "precache-manifest.d6c8a94cabc4beceef186606aebe9338.js": "/health-tracker/precache-manifest.d6c8a94cabc4beceef186606aebe9338.js",
-    "service-worker.js": "/health-tracker/service-worker.js",
-    "static/css/2.22921dbe.chunk.css.map": "/health-tracker/static/css/2.22921dbe.chunk.css.map",
-    "static/css/main.d881ca4d.chunk.css.map": "/health-tracker/static/css/main.d881ca4d.chunk.css.map",
-    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/health-tracker/static/js/2.5e821cef.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/health-tracker/static/media/Logo.11bb0a76.png",
-    "static/media/runkeeper.jpg": "/health-tracker/static/media/runkeeper.3e08acc1.jpg",
-    "static/media/strava.jpg": "/health-tracker/static/media/strava.18940f2a.jpg"
+    "main.css": "/static/css/main.d881ca4d.chunk.css",
+    "main.js": "/static/js/main.d5648852.chunk.js",
+    "main.js.map": "/static/js/main.d5648852.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.53b26e9b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.53b26e9b.js.map",
+    "static/css/2.22921dbe.chunk.css": "/static/css/2.22921dbe.chunk.css",
+    "static/js/2.5e821cef.chunk.js": "/static/js/2.5e821cef.chunk.js",
+    "static/js/2.5e821cef.chunk.js.map": "/static/js/2.5e821cef.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4a5e4a7954ca0dae83fce4d9d739be81.js": "/precache-manifest.4a5e4a7954ca0dae83fce4d9d739be81.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.22921dbe.chunk.css.map": "/static/css/2.22921dbe.chunk.css.map",
+    "static/css/main.d881ca4d.chunk.css.map": "/static/css/main.d881ca4d.chunk.css.map",
+    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/static/js/2.5e821cef.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/static/media/Logo.11bb0a76.png",
+    "static/media/runkeeper.jpg": "/static/media/runkeeper.3e08acc1.jpg",
+    "static/media/strava.jpg": "/static/media/strava.18940f2a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7054d133.js",
+    "static/js/runtime-main.53b26e9b.js",
     "static/css/2.22921dbe.chunk.css",
     "static/js/2.5e821cef.chunk.js",
     "static/css/main.d881ca4d.chunk.css",
-    "static/js/main.0a6dd63a.chunk.js"
+    "static/js/main.d5648852.chunk.js"
   ]
 }
