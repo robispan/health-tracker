@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.d881ca4d.chunk.css",
-    "main.js": "/static/js/main.d5648852.chunk.js",
-    "main.js.map": "/static/js/main.d5648852.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.53b26e9b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.53b26e9b.js.map",
-    "static/css/2.22921dbe.chunk.css": "/static/css/2.22921dbe.chunk.css",
-    "static/js/2.5e821cef.chunk.js": "/static/js/2.5e821cef.chunk.js",
-    "static/js/2.5e821cef.chunk.js.map": "/static/js/2.5e821cef.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.4a5e4a7954ca0dae83fce4d9d739be81.js": "/precache-manifest.4a5e4a7954ca0dae83fce4d9d739be81.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.22921dbe.chunk.css.map": "/static/css/2.22921dbe.chunk.css.map",
-    "static/css/main.d881ca4d.chunk.css.map": "/static/css/main.d881ca4d.chunk.css.map",
-    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/static/js/2.5e821cef.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/static/media/Logo.11bb0a76.png",
-    "static/media/runkeeper.jpg": "/static/media/runkeeper.3e08acc1.jpg",
-    "static/media/strava.jpg": "/static/media/strava.18940f2a.jpg"
+    "main.css": "/health-trckr/static/css/main.d881ca4d.chunk.css",
+    "main.js": "/health-trckr/static/js/main.faf2de8c.chunk.js",
+    "main.js.map": "/health-trckr/static/js/main.faf2de8c.chunk.js.map",
+    "runtime-main.js": "/health-trckr/static/js/runtime-main.77e63c42.js",
+    "runtime-main.js.map": "/health-trckr/static/js/runtime-main.77e63c42.js.map",
+    "static/css/2.22921dbe.chunk.css": "/health-trckr/static/css/2.22921dbe.chunk.css",
+    "static/js/2.5e821cef.chunk.js": "/health-trckr/static/js/2.5e821cef.chunk.js",
+    "static/js/2.5e821cef.chunk.js.map": "/health-trckr/static/js/2.5e821cef.chunk.js.map",
+    "index.html": "/health-trckr/index.html",
+    "precache-manifest.88b4c9ed91f9b566a79a8fc53cc9d217.js": "/health-trckr/precache-manifest.88b4c9ed91f9b566a79a8fc53cc9d217.js",
+    "service-worker.js": "/health-trckr/service-worker.js",
+    "static/css/2.22921dbe.chunk.css.map": "/health-trckr/static/css/2.22921dbe.chunk.css.map",
+    "static/css/main.d881ca4d.chunk.css.map": "/health-trckr/static/css/main.d881ca4d.chunk.css.map",
+    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/health-trckr/static/js/2.5e821cef.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/health-trckr/static/media/Logo.11bb0a76.png",
+    "static/media/runkeeper.jpg": "/health-trckr/static/media/runkeeper.3e08acc1.jpg",
+    "static/media/strava.jpg": "/health-trckr/static/media/strava.18940f2a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.53b26e9b.js",
+    "static/js/runtime-main.77e63c42.js",
     "static/css/2.22921dbe.chunk.css",
     "static/js/2.5e821cef.chunk.js",
     "static/css/main.d881ca4d.chunk.css",
-    "static/js/main.d5648852.chunk.js"
+    "static/js/main.faf2de8c.chunk.js"
   ]
 }
