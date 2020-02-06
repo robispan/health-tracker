@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d71295d0bbf3a34f025c5d878cc7319a",
+    "revision": "42d15b0d575143f4500718f4d61e90c9",
     "url": "/health-tracker/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/health-tracker/static/css/2.22921dbe.chunk.css"
   },
   {
-    "revision": "50a23eae86220166dd71",
+    "revision": "3cafe7e459244c5f7cf7",
     "url": "/health-tracker/static/css/main.d881ca4d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/health-tracker/static/js/2.114f7625.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50a23eae86220166dd71",
-    "url": "/health-tracker/static/js/main.9df37f88.chunk.js"
+    "revision": "3cafe7e459244c5f7cf7",
+    "url": "/health-tracker/static/js/main.8958c88f.chunk.js"
   },
   {
     "revision": "952ce8d3156fee4d943a",
