@@ -19,10 +19,11 @@ const Home = ({ location, history }) => {
 	);
 
 	useEffect(() => {
+		console.log('inside effect')
 		if (location.search === '?strava-redirect') {
 			history.push({
 				pathname: '/strava-auth',
-				search: '?' + document.referrer.split('#')[1]
+				search: '?' + document.referrer.split('?')[1]
 			})
 		}
 	});
