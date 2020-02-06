@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import LoadingContext from '../../../context/loading/loadingContext';
 import StravaContext from '../../../context/strava/stravaContext';
@@ -9,7 +9,7 @@ import ConnectCard from './ConnectCard';
 import StravaImg from '../../assets/images/strava.jpg';
 import RunkeeperImg from '../../assets/images/runkeeper.jpg';
 
-const Home = () => {
+const Home = ({ location, history }) => {
 	const { loading } = useContext(LoadingContext);
 	const { stravaData, authStrava, clearStravaData } = useContext(
 		StravaContext
@@ -17,6 +17,15 @@ const Home = () => {
 	const { runKeeperData, authRunKeeper, clearRunKeeperData } = useContext(
 		RunkeeperContext
 	);
+
+	useEffect(() => {
+		if (location.search === '?strava-redirect') {
+			history.push({
+				pathname: '/strava-auth',
+				search: '?' + document.referrer.split('#')[1]
+			})
+		}
+	});
 
 	return loading ? (
 		'Loading ...'
