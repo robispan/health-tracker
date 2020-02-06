@@ -22,7 +22,7 @@ const Home = ({ location, history }) => {
 		console.log('inside effect')
 		if (location.search === '?strava-redirect') {
 			history.push({
-				pathname: '/strava-auth',
+				pathname: '/health-tracker/strava-auth',
 				search: '?' + document.referrer.split('?')[1]
 			})
 		}
