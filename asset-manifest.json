@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/health-trckr/static/css/main.d881ca4d.chunk.css",
-    "main.js": "/health-trckr/static/js/main.faf2de8c.chunk.js",
-    "main.js.map": "/health-trckr/static/js/main.faf2de8c.chunk.js.map",
-    "runtime-main.js": "/health-trckr/static/js/runtime-main.77e63c42.js",
-    "runtime-main.js.map": "/health-trckr/static/js/runtime-main.77e63c42.js.map",
-    "static/css/2.22921dbe.chunk.css": "/health-trckr/static/css/2.22921dbe.chunk.css",
-    "static/js/2.5e821cef.chunk.js": "/health-trckr/static/js/2.5e821cef.chunk.js",
-    "static/js/2.5e821cef.chunk.js.map": "/health-trckr/static/js/2.5e821cef.chunk.js.map",
-    "index.html": "/health-trckr/index.html",
-    "precache-manifest.88b4c9ed91f9b566a79a8fc53cc9d217.js": "/health-trckr/precache-manifest.88b4c9ed91f9b566a79a8fc53cc9d217.js",
-    "service-worker.js": "/health-trckr/service-worker.js",
-    "static/css/2.22921dbe.chunk.css.map": "/health-trckr/static/css/2.22921dbe.chunk.css.map",
-    "static/css/main.d881ca4d.chunk.css.map": "/health-trckr/static/css/main.d881ca4d.chunk.css.map",
-    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/health-trckr/static/js/2.5e821cef.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/health-trckr/static/media/Logo.11bb0a76.png",
-    "static/media/runkeeper.jpg": "/health-trckr/static/media/runkeeper.3e08acc1.jpg",
-    "static/media/strava.jpg": "/health-trckr/static/media/strava.18940f2a.jpg"
+    "main.css": "/health-tracker/static/css/main.d881ca4d.chunk.css",
+    "main.js": "/health-tracker/static/js/main.dab1133f.chunk.js",
+    "main.js.map": "/health-tracker/static/js/main.dab1133f.chunk.js.map",
+    "runtime-main.js": "/health-tracker/static/js/runtime-main.7054d133.js",
+    "runtime-main.js.map": "/health-tracker/static/js/runtime-main.7054d133.js.map",
+    "static/css/2.22921dbe.chunk.css": "/health-tracker/static/css/2.22921dbe.chunk.css",
+    "static/js/2.5e821cef.chunk.js": "/health-tracker/static/js/2.5e821cef.chunk.js",
+    "static/js/2.5e821cef.chunk.js.map": "/health-tracker/static/js/2.5e821cef.chunk.js.map",
+    "index.html": "/health-tracker/index.html",
+    "precache-manifest.daf8bd570c8759d3ed6cb1efef569f0e.js": "/health-tracker/precache-manifest.daf8bd570c8759d3ed6cb1efef569f0e.js",
+    "service-worker.js": "/health-tracker/service-worker.js",
+    "static/css/2.22921dbe.chunk.css.map": "/health-tracker/static/css/2.22921dbe.chunk.css.map",
+    "static/css/main.d881ca4d.chunk.css.map": "/health-tracker/static/css/main.d881ca4d.chunk.css.map",
+    "static/js/2.5e821cef.chunk.js.LICENSE.txt": "/health-tracker/static/js/2.5e821cef.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/health-tracker/static/media/Logo.11bb0a76.png",
+    "static/media/runkeeper.jpg": "/health-tracker/static/media/runkeeper.3e08acc1.jpg",
+    "static/media/strava.jpg": "/health-tracker/static/media/strava.18940f2a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.77e63c42.js",
+    "static/js/runtime-main.7054d133.js",
     "static/css/2.22921dbe.chunk.css",
     "static/js/2.5e821cef.chunk.js",
     "static/css/main.d881ca4d.chunk.css",
-    "static/js/main.faf2de8c.chunk.js"
+    "static/js/main.dab1133f.chunk.js"
   ]
 }
