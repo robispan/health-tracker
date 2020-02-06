@@ -55,7 +55,7 @@ const App = () => {
 	}, []);
 
 	return (
-		<Router basename={'/health-tracker'}>
+		<Router>
 			<Navbar />
 			<div className='container'>
 				<Switch>
