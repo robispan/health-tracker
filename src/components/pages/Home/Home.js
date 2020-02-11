@@ -20,9 +20,10 @@ const Home = ({ location, history }) => {
 
 	useEffect(() => {
 		console.log('inside effect', document.referrer)
+		alert('document.referrer', document.referrer)
 		if (location.search === '?strava-redirect') {
 			history.push({
-				pathname: '/health-tracker/strava-auth',
+				pathname: '/strava-auth',
 				search: '?' + document.referrer.split('?')[1]
 			})
 		}
