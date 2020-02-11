@@ -19,12 +19,12 @@ const Home = ({ location, history }) => {
 	);
 
 	useEffect(() => {
-		console.log('inside effect', document.referrer)
-		alert('document.referrer', document.referrer)
-		if (location.search === '?strava-redirect') {
+		console.log('inside effect', location.search)
+		if (location.search.includes('?strava-auth')) {
+			console.log('object')
 			history.push({
 				pathname: '/strava-auth',
-				search: '?' + document.referrer.split('?')[1]
+				search: '?' + location.search.split('?')[1]
 			})
 		}
 	});
