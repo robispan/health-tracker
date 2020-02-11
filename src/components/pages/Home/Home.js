@@ -23,7 +23,7 @@ const Home = ({ location, history }) => {
 		if (location.search.includes('?strava-auth')) {
 			console.log('object')
 			history.push({
-				pathname: '/strava-auth',
+				pathname: '/health-tracker/strava-auth',
 				search: '?' + location.search.split('?')[1]
 			})
 		}

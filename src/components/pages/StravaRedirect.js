@@ -33,7 +33,7 @@ const StravaRedirect = ({ location, history }) => {
 				// Save refresh token to sessionStorage
 				sessionStorage.setItem('_strava_rt', res.data.refresh_token);
 			} catch (error) {
-				console.log('error fetching Strava outh tokens', error);
+				console.log('error fetching Strava oauth tokens', error);
 			}
 
 			// Stop loading
