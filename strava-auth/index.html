@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			http-equiv="refresh"
-			content="0;url=http://robispan.github.io/health-tracker/?strava-redirect"
-		/>
-		<link
-			rel="canonical"
-			href="http://robispan.github.io/health-tracker/?strava-redirect"
-		/>
 		<title>Document</title>
 	</head>
-	<body></body>
+	<body>
+		<script>
+			const url = `http://localhost:3000/?strava-auth&${location.search.substring(
+				1
+			)}`;
+			console.log(url);
+			location.href = url;
+		</script>
+	</body>
 </html>
