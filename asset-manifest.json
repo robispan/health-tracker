@@ -1,28 +1,29 @@
 {
   "files": {
     "main.css": "/health-tracker/static/css/main.d881ca4d.chunk.css",
-    "main.js": "/health-tracker/static/js/main.f30fe81f.chunk.js",
-    "main.js.map": "/health-tracker/static/js/main.f30fe81f.chunk.js.map",
+    "main.js": "/health-tracker/static/js/main.95e4c7a1.chunk.js",
+    "main.js.map": "/health-tracker/static/js/main.95e4c7a1.chunk.js.map",
     "runtime-main.js": "/health-tracker/static/js/runtime-main.7054d133.js",
     "runtime-main.js.map": "/health-tracker/static/js/runtime-main.7054d133.js.map",
     "static/css/2.22921dbe.chunk.css": "/health-tracker/static/css/2.22921dbe.chunk.css",
-    "static/js/2.114f7625.chunk.js": "/health-tracker/static/js/2.114f7625.chunk.js",
-    "static/js/2.114f7625.chunk.js.map": "/health-tracker/static/js/2.114f7625.chunk.js.map",
+    "static/js/2.a5c21eb2.chunk.js": "/health-tracker/static/js/2.a5c21eb2.chunk.js",
+    "static/js/2.a5c21eb2.chunk.js.map": "/health-tracker/static/js/2.a5c21eb2.chunk.js.map",
     "index.html": "/health-tracker/index.html",
-    "precache-manifest.f3e0a494d92162376b90b164fbbd8091.js": "/health-tracker/precache-manifest.f3e0a494d92162376b90b164fbbd8091.js",
+    "precache-manifest.0858846e39faeae198028171acd69b97.js": "/health-tracker/precache-manifest.0858846e39faeae198028171acd69b97.js",
     "service-worker.js": "/health-tracker/service-worker.js",
     "static/css/2.22921dbe.chunk.css.map": "/health-tracker/static/css/2.22921dbe.chunk.css.map",
     "static/css/main.d881ca4d.chunk.css.map": "/health-tracker/static/css/main.d881ca4d.chunk.css.map",
-    "static/js/2.114f7625.chunk.js.LICENSE.txt": "/health-tracker/static/js/2.114f7625.chunk.js.LICENSE.txt",
+    "static/js/2.a5c21eb2.chunk.js.LICENSE.txt": "/health-tracker/static/js/2.a5c21eb2.chunk.js.LICENSE.txt",
     "static/media/Logo.png": "/health-tracker/static/media/Logo.11bb0a76.png",
+    "static/media/mapmyfitness.png": "/health-tracker/static/media/mapmyfitness.fd0401e7.png",
     "static/media/runkeeper.jpg": "/health-tracker/static/media/runkeeper.3e08acc1.jpg",
-    "static/media/strava.jpg": "/health-tracker/static/media/strava.18940f2a.jpg"
+    "static/media/withings.png": "/health-tracker/static/media/withings.d1e744a1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7054d133.js",
     "static/css/2.22921dbe.chunk.css",
-    "static/js/2.114f7625.chunk.js",
+    "static/js/2.a5c21eb2.chunk.js",
     "static/css/main.d881ca4d.chunk.css",
-    "static/js/main.f30fe81f.chunk.js"
+    "static/js/main.95e4c7a1.chunk.js"
   ]
 }
