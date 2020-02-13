@@ -5,14 +5,11 @@ import App from './App';
 
 
 import LoadingState from './context/loading/LoadingState';
-import StravaState from './context/strava/StravaState';
-import RunKeeperState from './context/runKeeper/RunKeeperState';
+import GetHealthState from './context/getHealth/GetHealthState';
 
 
 ReactDOM.render(
 	<LoadingState>
-		<StravaState>
-			<RunKeeperState><App />
-			</RunKeeperState>
-		</StravaState>
+		<GetHealthState><App />
+		</GetHealthState>
 	</LoadingState>, document.getElementById('root'));

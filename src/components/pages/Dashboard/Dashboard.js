@@ -1,29 +1,37 @@
 import React, { useContext } from 'react';
 
-import StravaContext from '../../../context/strava/stravaContext';
-import RunKeeperContext from '../../../context/runKeeper/runKeeperContext';
+import getHealthContext from '../../../context/getHealth/getHealthContext';
 
 import MetricsCard from './MetricsCard';
 
 const Dashboard = () => {
-	const { stravaData } = useContext(StravaContext);
-	const { runKeeperData } = useContext(RunKeeperContext);
+	const { runkeeperData, withingsData, mapmyfitnessData } = useContext(getHealthContext);
 
 	const targetMetrics = {
-		targetWeight: 50,
-		targetCaloriesLost: 800
+		targetBodyfat: 10,
+		targetCaloriesLost: 8000,
+		targetSteps: 1000
 	};
 
-	const weightRatio =
-		stravaData && stravaData.weight
-			? Math.round((100 * targetMetrics.targetWeight) / stravaData.weight)
+	const bodyfatRatio =
+		withingsData && withingsData.body_fats[0].fat_percent
+			? Math.round(100 * targetMetrics.targetBodyfat / withingsData.body_fats[0].fat_percent)
 			: null;
 
+
 	const caloriesRatio =
-		runKeeperData && runKeeperData.activities && runKeeperData.activities[1]
+		runkeeperData && runkeeperData.calories_burnt
 			? Math.round(
-				(100 * runKeeperData.activities[1].calories) /
+				(100 * runkeeperData.calories_burnt[1].calories) /
 				targetMetrics.targetCaloriesLost
+			)
+			: null;
+
+	const stepsRatio =
+		mapmyfitnessData && mapmyfitnessData.steps_counts
+			? Math.round(
+				(100 * mapmyfitnessData.steps_counts[0].steps) /
+				targetMetrics.targetSteps
 			)
 			: null;
 
@@ -31,11 +39,14 @@ const Dashboard = () => {
 		<div>
 			<h2 className='center upper'>Dashboard</h2>
 			<div className='grid'>
-				{/* Weight */}
-				<MetricsCard label='Weight loss progression' ratio={weightRatio} />
+				{/* Body fat */}
+				<MetricsCard label='Weight loss progression' ratio={bodyfatRatio} />
 
 				{/* Calories */}
 				<MetricsCard label='Calories burn progression' ratio={caloriesRatio} />
+
+				{/* Steps */}
+				<MetricsCard label='Steps made today' ratio={stepsRatio} />
 			</div>
 		</div>
 	);

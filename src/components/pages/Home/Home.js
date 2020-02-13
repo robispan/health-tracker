@@ -1,33 +1,29 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
 import LoadingContext from '../../../context/loading/loadingContext';
-import StravaContext from '../../../context/strava/stravaContext';
-import RunkeeperContext from '../../../context/runKeeper/runKeeperContext';
+import getHealthContext from '../../../context/getHealth/getHealthContext';
 
 import ConnectCard from './ConnectCard';
 
-import StravaImg from '../../assets/images/strava.jpg';
+import WithingsImg from '../../assets/images/withings.png';
 import RunkeeperImg from '../../assets/images/runkeeper.jpg';
+import MapmyFitnessImg from '../../assets/images/mapmyfitness.png';
 
-const Home = ({ location, history }) => {
+const Home = () => {
 	const { loading } = useContext(LoadingContext);
-	const { stravaData, authStrava, clearStravaData } = useContext(
-		StravaContext
-	);
-	const { runKeeperData, authRunKeeper, clearRunKeeperData } = useContext(
-		RunkeeperContext
-	);
 
-	useEffect(() => {
-		console.log('inside effect', location.search)
-		if (location.search.includes('?strava-auth')) {
-			console.log('object')
-			history.push({
-				pathname: '/health-tracker/strava-auth',
-				search: '?' + location.search.split('?')[1]
-			})
-		}
-	});
+	const {
+		runkeeperData,
+		withingsData,
+		mapmyfitnessData,
+		disconnectRunkeeper,
+		disconnectWithings,
+		disconnectMapmyfitness,
+		getRunkeeperData,
+		getWithingsData,
+		getMapmyfitnessData } = useContext(
+			getHealthContext
+		);
 
 	return loading ? (
 		'Loading ...'
@@ -36,20 +32,28 @@ const Home = ({ location, history }) => {
 				<h2 className='center upper'>Connect your apps</h2>
 
 				<div className='grid'>
-					{/* Strava card */}
+					{/* Withings card */}
 					<ConnectCard
-						imageUrl={StravaImg}
-						connected={stravaData !== null}
-						onConnect={authStrava}
-						onDisconnect={clearStravaData}
+						imageUrl={WithingsImg}
+						connected={withingsData !== null}
+						onConnect={getWithingsData}
+						onDisconnect={disconnectWithings}
 					/>
 
 					{/* Runkeeper card */}
 					<ConnectCard
 						imageUrl={RunkeeperImg}
-						connected={runKeeperData !== null}
-						onConnect={authRunKeeper}
-						onDisconnect={clearRunKeeperData}
+						connected={runkeeperData !== null}
+						onConnect={getRunkeeperData}
+						onDisconnect={disconnectRunkeeper}
+					/>
+
+					{/* Mapmyfitness card */}
+					<ConnectCard
+						imageUrl={MapmyFitnessImg}
+						connected={mapmyfitnessData !== null}
+						onConnect={getMapmyfitnessData}
+						onDisconnect={disconnectMapmyfitness}
 					/>
 				</div>
 			</div>
